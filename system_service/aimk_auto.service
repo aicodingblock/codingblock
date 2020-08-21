@@ -1,0 +1,13 @@
+#! /bin/sh
+
+[Unit] 
+Description=My Script Service
+After=multi-user.target
+
+[Service]
+User=pi
+Type=idle
+ExecStart=/usr/bin/python3 /home/pi/autorun/py_script/python3/button_trigger_4share3.py > /home/pi/autorun/aimk_auto.log 2>&1
+
+[Install]
+WantedBy=multi-user.target
